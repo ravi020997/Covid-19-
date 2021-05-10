@@ -35,9 +35,25 @@ $(document).ready(function(){
 
             if (top > offset && top < offset + height){
                 $('.navBar a').removeClass('active');
-                $('.navBar').find('[href="#${id}"]').addlass('active');
+                $('.navBar').find('[href="#$(id)"]').addClass('active');
             }
         });
     });
 
+    // smooth scrolling
+
+    $('a[href*="#"]').on ('click',function(e){
+
+        $('html, body').animate({
+
+            scrollTop: $($(this).attr('href')).offset().top,
+   
+    },
+
+     500,
+    'linear'
+
+        );
+
+});
 });
