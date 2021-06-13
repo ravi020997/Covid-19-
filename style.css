@@ -483,9 +483,8 @@ header.sticky {
     
      50% {
         transform: translateY(-5rem);
+     }
     }
-}
-
  
 @media (max-width:1200px){
     
